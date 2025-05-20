@@ -34,20 +34,22 @@ nr_symbols = int(input(f"How many symbols would you like?\n"))
 
 # Way 3
 
-password = ""
+password = []
 random_password = ""
 for char in range(0, nr_letters):
-    password += random.choice(letters)
+    password.append(random.choice(letters))
 
 for char in range(0, nr_numbers):
-    password += random.choice(numbers)
+    password.append(random.choice(numbers))
 
 for char in range(0, nr_symbols):
-    password += random.choice(symbols)
+    password.append(random.choice(symbols))
+
+# print(password)
+# random.shuffle(password)
+# print(password)
 
 for chart in password:
     random_password += random.choice(chart)
-    # print(chart)
 
 print(random_password)
-# print(len(random_password))
